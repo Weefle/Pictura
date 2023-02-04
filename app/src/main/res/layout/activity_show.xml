@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_picture_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowPictureActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/add_picture_window_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/picture_bg_layout"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/picture_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/picture_author"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/add_picture_text_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardPreventCornerOverlap="false">
+
+                <com.jsibbold.zoomage.ZoomageView
+                    android:id="@+id/add_picture_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_template"
+                    app:zoomage_restrictBounds="true"
+                    app:zoomage_animateOnReset="true"
+                    app:zoomage_autoResetMode="ALWAYS"
+                    app:zoomage_autoCenter="true"
+                    app:zoomage_zoomable="true"
+                    app:zoomage_translatable="true"
+                    app:zoomage_minScale="1"
+                    app:zoomage_maxScale="10"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/add_picture_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/picture_title"
+            />
+
+        <TextView
+            android:id="@+id/picture_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/picture_date"
+            />
+        <TextView
+            android:id="@+id/picture_likes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/picture_likes"
+            />
+        <Button
+            android:id="@+id/instagram"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/picture_button_bg_layout"
+            android:text="📷 Instagram"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/add_picture_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/picture_button_bg_layout"
+            android:text="👍 Aimer"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/save"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/picture_button_bg_layout"
+            android:text="💾 Enregistrer"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pictura</string>
+    <string name="picture_author">Author</string>
+    <string name="picture_date">Date</string>
+    <string name="picture_title">Description</string>
+    <string name="picture_likes">Likes</string>
+</resources>
